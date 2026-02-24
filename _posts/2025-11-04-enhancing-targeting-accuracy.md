@@ -15,7 +15,7 @@ Our client, a grocery retailer, wants to utilise Machine Learning to reduce mail
     - [Results](#overview-results)
     - [Growth/Next Steps](#overview-growth)
 - [01. Data Overview](#data-overview)
-- [02. Modelling Overview](#modelling-overview)
+- [02. Modeling Overview](#modelling-overview)
 - [03. Logistic Regression](#logreg-title)
 - [04. Decision Tree](#clftree-title)
 - [05. Random Forest](#rf-title)
@@ -1663,4 +1663,5 @@ While predictive accuracy was relatively high - other modelling approaches could
 We could even look to tune the hyperparameters of the Random Forest, notably regularisation parameters such as tree depth, as well as potentially training on a higher number of Decision Trees in the Random Forest.
 
 From a data point of view, further variables could be collected, and further feature engineering could be undertaken to ensure that we have as much useful information available for predicting customer loyalty
+
 
