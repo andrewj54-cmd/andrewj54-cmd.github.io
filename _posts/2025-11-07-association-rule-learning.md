@@ -25,7 +25,7 @@ ___
 
 # Project Overview  <a name="overview-main"></a>
 
-### Context <a name="overview-context"></a>
+###  Context <a name="overview-context"></a>
 
 Our client is looking to re-jig the alcohol section within their store.  Customers are often complaining that they can't find the products they want, and are also wanting recommendations about which other products to try.  On top of this, their marketing team would like to start running "bundled" promotions as this has worked well in other areas of the store - but need guidance with selecting which products to put together.
 
@@ -402,5 +402,6 @@ ___
 As this was first & foremost an exploratory project, we will take back the results to the client Category Managers & discuss the results, our views on how these insights can be actioned best, and any considerations that need to be taken into account when interpreting.
 
 From there we will recommend applying this same logic to all other categories, as well as potentially across the full-product range.
+
 
 We will also propose the build of the "Keyword Search Engine" which will help Category Managers extract and utilise the insights held within the data.
