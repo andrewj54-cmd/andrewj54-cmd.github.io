@@ -20,7 +20,7 @@ location: "Los Angeles, USA"
 resume_url: /docs/resume.docx
 avatar_image: /img/profile_picture.JPG
 
-#-------------------------------
+#--------------------------------
 # Contact links
 linkedln: "https://linkedln.com/#" # Add your linkedln handle
 github: "https://github.com/#"  # Add your github handle
@@ -51,6 +51,7 @@ defaults:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
 
 
 
