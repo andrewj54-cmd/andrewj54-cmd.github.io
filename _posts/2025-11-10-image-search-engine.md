@@ -55,7 +55,7 @@ We test two different images, and plot the search results along with the cosine 
 
 <br>
 <br>
-### Discussion, Growth & Next Steps <a name="overview-growth"></a>
+###  Discussion, Growth & Next Steps <a name="overview-growth"></a>
 
 The way we have coded this up is very much for the "proof of concept".  In practice we would definitely have the last section of the code (where we submit a search) isolated, and running from all of the saved objects that we need - we wouldn't include it in a single script like we have here.
 
@@ -469,5 +469,6 @@ This was tested only in one category, we would want to test on a broader array o
 We only looked at Cosine Similarity here, it would be interesting to investigate other distance metrics.
 
 It would be beneficial to come up with a way to quantify the quality of the search results.  This could come from customer feedback, or from click-through rates on the site.
+
 
 Here we utilised VGG16. It would be worthwhile testing other available pre-trained networks such as ResNet, Inception, and the DenseNet networks.
