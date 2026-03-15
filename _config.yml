@@ -13,7 +13,7 @@ description: "Hi I'm Andrew, and I'm a Data Scientist.  My portfolio focuses on 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
-#-------------------------------
+#------------------------------
 # About Section
 subtitle: Data Science <span style="color:#f58506"> Portfolio </span>
 location: "Los Angeles, USA"
