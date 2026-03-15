@@ -6,7 +6,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-remote-theme
 
-#-------------------------------
+#------------------------------
 # General Site Settings
 title: Andrew Wood
 description: "Hi I'm Andrew, and I'm a Data Scientist.  My portfolio focuses on interesting projects I've recently undertaken, with a strong emphasis on business impact. Please visit my Github & LinkedIn pages (or download my Resume) by using the links below!"
