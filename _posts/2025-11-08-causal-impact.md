@@ -28,7 +28,7 @@ ___
 
 Earlier in the year, our client, a grocery retailer, ran a campaign to promote their new "Delivery Club" - an initiative that costs a customer $100 per year for membership, but offers free grocery deliveries rather than the normal cost of $10 per delivery.
 
-They want to understand if customers who did join the club have increased their spend in the three months following.  The hypothesis is that, if customers are not paying for deliveries, they will be tempted to shop more frequently, and hopefully purchase more each time.
+They want to understand if customers who did join the club have increased their spend in the three months following.  The hypothesis is that if customers are not paying for deliveries, they will be tempted to shop more frequently, and hopefully purchase more each time.
 
 The aim of this work is to understand and quantify the uplift in sales for customers that joined the club, over and above what they *would* have spent had the club not come into existence!
 
@@ -65,7 +65,7 @@ It would be interesting to track this uplift over time and see if:
 * It flattens or returns to normal
 * We see any form of uplift pull-forward
 
-It would also be interesting to analyse what it is that is making up this uplift.  Are customers increasing their spend across the same categories - or are they buying into new categories
+It would also be interesting to analyse what it is that is making up this uplift.  Are customers increasing their spend across the same categories - or are they buying into new categories?
 
 <br>
 <br>
@@ -87,7 +87,7 @@ But to understand this *robustly & reliably* we really need to understand what *
 
 In most cases the trends *preceding the event in question* isn’t tame, it is filled with lumps and bumps and ups and downs.  When some key event does take place, understanding what *would have happened had the event not taken place* so we can estimate the true impact can be difficult!
 
-In many cases, the event that we’re analysing is part of a randomised & controlled experiment, and this means understanding the difference between the group that was affected by the event can be compared to a control group, that was purposely held back from the effect of the event.
+In many cases, the event that we’re analysing is part of a randomised & controlled experiment, and this means understanding the difference between the group that was affected by the event and a control group that was purposely held back from the effect of the event.
 
 But there are a lot of cases where we just can’t run a randomised experiment, either because it’s expensive, or potentially it’s just impossible.  As an example, in the case of measuring the change in a share price after an event, we don’t really have a direct control group to lean on for comparison purposes.
 
@@ -100,7 +100,7 @@ Causal Impact is a time-series technique, originally developed by Google.
 
 It estimates what *would have happened* (known as a "counterfactual") by applying a model to *comparable data* in a pre-period and projecting this model onto that data in a post-period. The difference between the actual data and the counterfactual in the post-period, is the estimated impact of the event.
 
-The *comparable data* that we pass in can be a control group, another set of related data, or even multiple sets of related data - but for this approach to work robustly & reliably, this additional data must adhere to several rules:
+The *comparable data* that we pass in can be a control group, another set of related data, or even multiple sets of related data - but for this approach to work robustly and reliably, this additional data must adhere to several rules:
 
 It must not be affected by the event that we’re measuring, but it must be predictive of our output, or have some relationship with our initial time-series data.
 
@@ -127,7 +127,7 @@ ___
 
 In the client database, we have a *campaign_data* table which shows us which customers received each type of "Delivery Club" mailer, which customers were in the control group, and which customers joined the club as a result.
 
-Since Delivery Club membership was open to *all customers* - the control group we have in the *campaign_data* table would help us measure the impact of *contacting* customers but here, we are actually look to measure the overall impact on sales from the Delivery Club itself.  Because of this, we will instead just use customers who did not sign up as the control.  The customers who did not sign up should continue their normal shopping habits after the club went live, and this will help us create the counter-factual for the customers that did sign-up.
+Since Delivery Club membership was open to *all customers* - the control group we have in the *campaign_data* table would help us measure the impact of *contacting* customers but here, we are actually looking to measure the overall impact on sales from the Delivery Club itself.  Because of this, we will instead just use customers who did not sign up as the control.  The customers who did not sign up should continue their normal shopping habits after the club goes live, and this will help us create the counter-factual for the customers that did sign-up.
 
 In the code below, we:
 
@@ -247,7 +247,7 @@ Just eyeing this first chart, it does indeed look like there is some increase in
 <br>
 **Chart 2:  Pointwise Effects**
 
-This second chart shows us, for each day (or data point in general) in our time-series, the *raw differences* between the actual values and the values for the counterfactual.  It is plotting the *differences* from Chart 1.  As an example, if on Day 1 the actual and the counterfactual were the same, this chart would show a value of 0.  If the actual is higher than the counterfactual then we would see a positive value on this chart, and vice versa.  It is essentially showing how far above or below the counterfactual, the actual values are.
+This second chart shows us, for each day (or data point in general) in our time-series, the *raw differences* between the actual values and the values for the counterfactual.  It is plotting the *differences* from Chart 1.  As an example, if on Day 1 the actual and the counterfactual were the same, this chart would show a value of 0.  If the actual is higher than the counterfactual then we would see a positive value on this chart, and vice versa.  It is essentially showing how far above or below the counterfactual the actual values are.
 
 What is interesting here is that for the pre-period we see a difference surrounding zero, but in the post period we see mostly positive values mirroring what we saw in Chart 1 where the actual average spend was greater than the counterfactual.
 
