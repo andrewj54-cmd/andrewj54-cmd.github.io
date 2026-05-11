@@ -23,7 +23,7 @@ avatar_image: /img/profile_image.jpg
 #--------------------------------
 # Contact links
 linkedln: "https://www.linkedin.com/in/andrew-ja-wood/" # Add your linkedln handle
-github: "https://github.com/#"  # Add your github handle
+github: "https://github.com/andrewj54-cmd"  # Add your github handle
 
 paginate: 8
 paginate_path: "/page/:num"
